@@ -19,6 +19,31 @@ public class InterpretDrawingFile {
 		chooser.showOpenDialog(null);
 		File f = new File(chooser.getSelectedFile().getPath());
 		Scanner in = new Scanner(f); //making Scanner with a File
+		String shape = in.next();
+		int red = in.nextInt();
+		int green = in.nextInt();
+		int blue = in.nextInt();
+		Boolean yesno = in.nextBoolean();
+		Double x = in.nextDouble();
+		Double y = in.nextDouble();
+		Double halfwidth = in.nextDouble();
+		Double halfheight = in.nextDouble();
+		StdDraw.setPenColor(red, green, blue);
+		
+		if(shape == "rectangle_black_outlined.txt"){
+			StdDraw.rectangle(x, y, halfwidth, halfheight);
+		}
+	//if(shape == purpleellipse){
+			//StdDraw.ellipse(x, y, halfwidth, halfheight);
+		}
+		if(shape == redellipse){
+			StdDraw.filledEllipse(x, y, halfwidth, halfheight);
+		}
+
+
+
+
+
 		
 	}
 }
